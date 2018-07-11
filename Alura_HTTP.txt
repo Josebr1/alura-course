@@ -1,0 +1,62 @@
+Aula 06
+Parâmetros da requisição são chamados de Query Params
+vários parâmetros separados por &
+Métodos HTTP, GET e POST podem ser usados para troca de informações (Receber, enviar), dependendo da implementação do servidor.
+O protocolo HTTP define que o GET é sempre usado para acessar os dados.
+
+
+Aula 04
+Abordar o assunto de cabeçalho da requisição HTTP:
+
+Esses cabeçalhos são significativos apenas para uma única conexão a nível de transporte e não devem ser reenviados por proxies ou armazenados em cache. Tais cabeçalhos são: Connection, Keep-Alive, Proxy-Authenticate, Proxy-Authorization, TE, Trailer, Transfer-Encoding and Upgrade. Observe que apenas cabeçalhos hop-by-hop podem ser definidos utilizando o cabeçalho genérico Connection. 
+
+Não Foi abordado os cabeçalhos do HTTP
+
+Aula07
+As aplicações que disponibilizam serviços para outras são chamadas de WebServices. E uma API de utilização é documentada para uma integração eficiente entre sistemas.
+
+Ato de analisar o documento é chamado de realizar um parsing do arquivo.
+
+XML (eXtensible Markup Language)
+JSON (JavaScript Object Notation)
+
+Get-Resposta -> Accept:application/json
+Get-Response -> Content-Type:application/json
+
+Padrão REST
+REST -> Representational State Transfer
+Em sistemas REST, nossas URIs devem conter apenas substantivos, que são nossos recursos:/restaurante/ -> POST
+
+GET -> Recupera informações
+POST -> Adiciona informações
+PUT -> Adiciona ou modifica um recurso
+DELETE -> Remove o recurso representado na URI
+
+Representação 
+JSON/XML ou HTML
+
+REST é um padrão arquitetural para comunicação entre aplicações
+Recursos são definidos via URI
+
+Os formatos são chamados na documentação de MIME types
+
+Aula 08
+Especificação HTTP2 -> Criação em 2015
+GZIP é padrão e obrigatorio no HTTP/2
+Header são comprimidos usando um algoritmo chamado HPACK
+É exigido o uso do TLS por padrão
+
+A partir do HTTP2, não precisamos mais repetir os Headers
+Enviamos o cabeçalhos que são diferentes -> Conhecido como Headers Stateful
+No cabeçalho da requisição existe um ambiente que guarda estado 
+
+HTTP2 - Server Push
+
+HTTP1 -> Trabalha com requisições seriais
+HTTP2 -> Trabalha com um conceito de Server Push, envia dados para o cliente sem que o cliente tenha solicitado, tornando o tráfego de dados muito mais otimizado
+
+Multiplexação
+O keep-Alive determina quando tempo, por exemplo, a nossa conexão pode ficar ativa.
+
+Multiplexing -> Não espera uma requisição termina, ela já devolve uma outra requisição pronta
+
