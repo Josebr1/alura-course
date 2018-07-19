@@ -1,0 +1,11 @@
+C:\Users\jose.antonio\Documents\Alura\CaixaEletronico\CaixaEletronico\bin\Debug\CaixaEletronico.exe.config
+C:\Users\jose.antonio\Documents\Alura\CaixaEletronico\CaixaEletronico\bin\Debug\CaixaEletronico.exe
+C:\Users\jose.antonio\Documents\Alura\CaixaEletronico\CaixaEletronico\bin\Debug\CaixaEletronico.pdb
+C:\Users\jose.antonio\Documents\Alura\CaixaEletronico\CaixaEletronico\obj\Debug\CaixaEletronico.csprojAssemblyReference.cache
+C:\Users\jose.antonio\Documents\Alura\CaixaEletronico\CaixaEletronico\obj\Debug\CaixaEletronico.Properties.Resources.resources
+C:\Users\jose.antonio\Documents\Alura\CaixaEletronico\CaixaEletronico\obj\Debug\CaixaEletronico.csproj.GenerateResource.cache
+C:\Users\jose.antonio\Documents\Alura\CaixaEletronico\CaixaEletronico\obj\Debug\CaixaEletronico.csproj.CoreCompileInputs.cache
+C:\Users\jose.antonio\Documents\Alura\CaixaEletronico\CaixaEletronico\obj\Debug\CaixaEletronico.exe
+C:\Users\jose.antonio\Documents\Alura\CaixaEletronico\CaixaEletronico\obj\Debug\CaixaEletronico.pdb
+C:\Users\jose.antonio\Documents\Alura\CaixaEletronico\CaixaEletronico\obj\Debug\CaixaEletronico.CadastroDeConta.resources
+C:\Users\jose.antonio\Documents\Alura\CaixaEletronico\CaixaEletronico\obj\Debug\CaelumCaixaEletronico.Form1.resources

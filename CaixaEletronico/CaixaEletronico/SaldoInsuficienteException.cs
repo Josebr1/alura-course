@@ -6,12 +6,8 @@ using System.Threading.Tasks;
 
 namespace Caelum.CaixaEletronico.Contas
 {
-    class ContaInvestimento : Conta, ITributavel
+    class SaldoInsuficienteException : Exception
     {
 
-        public double CalculaTributo()
-        {
-            return this.Saldo * 0.03;
-        }
     }
 }

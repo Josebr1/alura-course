@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CaixaEletronico
+namespace Caelum.CaixaEletronico.Contas
 {
     class ContaPoupanca : Conta, ITributavel
     {
@@ -14,11 +14,6 @@ namespace CaixaEletronico
             {
                 this.Saldo += valor + 0.1;
             }
-        }
-
-        public override void Saca(double valor)
-        {
-            this.Saldo -= valor;
         }
         
         public double CalculaTributo()

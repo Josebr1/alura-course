@@ -1,4 +1,4 @@
-﻿namespace CaixaEletronico
+﻿namespace CaelumCaixaEletronico
 {
     partial class Form1
     {
@@ -38,6 +38,8 @@
             this.comboContas = new System.Windows.Forms.ComboBox();
             this.destinoDaTransferencia = new System.Windows.Forms.ComboBox();
             this.button4 = new System.Windows.Forms.Button();
+            this.btnAbrirConta = new System.Windows.Forms.Button();
+            this.btnRemoveConta = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textoTitular
@@ -128,11 +130,33 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
+            // btnAbrirConta
+            // 
+            this.btnAbrirConta.Location = new System.Drawing.Point(12, 270);
+            this.btnAbrirConta.Name = "btnAbrirConta";
+            this.btnAbrirConta.Size = new System.Drawing.Size(75, 23);
+            this.btnAbrirConta.TabIndex = 10;
+            this.btnAbrirConta.Text = "Abrir Conta";
+            this.btnAbrirConta.UseVisualStyleBackColor = true;
+            this.btnAbrirConta.Click += new System.EventHandler(this.btnAbrirConta_Click);
+            // 
+            // btnRemoveConta
+            // 
+            this.btnRemoveConta.Location = new System.Drawing.Point(154, 270);
+            this.btnRemoveConta.Name = "btnRemoveConta";
+            this.btnRemoveConta.Size = new System.Drawing.Size(126, 23);
+            this.btnRemoveConta.TabIndex = 11;
+            this.btnRemoveConta.Text = "Remover Conta";
+            this.btnRemoveConta.UseVisualStyleBackColor = true;
+            this.btnRemoveConta.Click += new System.EventHandler(this.btnRemoveConta_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 325);
+            this.Controls.Add(this.btnRemoveConta);
+            this.Controls.Add(this.btnAbrirConta);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.destinoDaTransferencia);
             this.Controls.Add(this.comboContas);
@@ -163,6 +187,8 @@
         private System.Windows.Forms.ComboBox comboContas;
         private System.Windows.Forms.ComboBox destinoDaTransferencia;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnAbrirConta;
+        private System.Windows.Forms.Button btnRemoveConta;
     }
 }
 

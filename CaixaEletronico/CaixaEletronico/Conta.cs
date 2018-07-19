@@ -1,10 +1,11 @@
-﻿using System;
+﻿using Caelum.CaixaEletronico.Clientes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CaixaEletronico
+namespace Caelum.CaixaEletronico.Contas
 {
     public abstract class Conta
     {
@@ -20,7 +21,21 @@ namespace CaixaEletronico
             }
         }
 
-        public abstract void Saca(double valor);
+        public virtual void Saca(double valor)
+        {
+            if(valor < 0.0)
+            {
+                throw new ArgumentException();
+            }
+            if (valor > this.Saldo)
+            {
+                throw new SaldoInsuficienteException();
+            }
+            else
+            {
+                this.Saldo -= valor;
+            }
+        }
         /*{
             if (valor > this.Saldo || valor < 0)
             {

@@ -1,4 +1,8 @@
-﻿using System;
+﻿using Caelum.CaixaEletronico.Banco;
+using Caelum.CaixaEletronico.Clientes;
+using Caelum.CaixaEletronico.Contas;
+using CaixaEletronico;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,22 +12,30 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CaixaEletronico
+namespace CaelumCaixaEletronico
 {
     public partial class Form1 : Form
     {
-        Conta [] contas;
+        private List<Conta> contas;
+        private int numeroDeContas;
 
         public Form1()
         {
             InitializeComponent();
         }
 
+        public void AdicionaConta(Conta conta)
+        {
+            this.contas.Add(conta);
+            this.numeroDeContas++;
+            comboContas.Items.Add(conta);
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
-            contas = new Conta[3];
+            contas = new List<Conta>();
 
-            Conta contaDoVictor = new ContaCorrente();
+            /*Conta contaDoVictor = new ContaCorrente();
             contaDoVictor.Titular = new Cliente();
             contaDoVictor.Titular.Nome = "Victor";
             contaDoVictor.Numero = 1;
@@ -45,7 +57,7 @@ namespace CaixaEletronico
             {
                 comboContas.Items.Add(conta);
                 destinoDaTransferencia.Items.Add(conta);
-            }
+            }*/
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -68,7 +80,17 @@ namespace CaixaEletronico
 
             double valorSaque = Convert.ToDouble(textoValorSaque);
             Conta contaSelecionada = this.BuscaContaSelecionada();
-            contaSelecionada.Saca(valorSaque);
+            try { 
+                contaSelecionada.Saca(valorSaque);
+            }
+            catch (SaldoInsuficienteException ex)
+            {
+                MessageBox.Show("Saldo insuficiente");
+            }
+            catch (ArgumentException ex)
+            {
+                MessageBox.Show("Não é possível sacar um valor negativo");
+            }
 
             this.MostraConta(contaSelecionada);
         }
@@ -121,6 +143,24 @@ namespace CaixaEletronico
 
             this.MostraConta(contaSelecionada);
 
+        }
+
+        private void btnAbrirConta_Click(object sender, EventArgs e)
+        {
+            CadastroDeConta cadastroDeConta = new CadastroDeConta(this);
+            cadastroDeConta.ShowDialog();
+        }
+
+        private void btnRemoveConta_Click(object sender, EventArgs e)
+        {
+            Conta contaSelecionada = this.BuscaContaSelecionada();
+            this.RemoveConta(contaSelecionada);
+        }
+
+        public void RemoveConta(Conta c)
+        {
+            this.contas.Remove(c);
+            comboContas.Items.Remove(c);
         }
     }
 }
